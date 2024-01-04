@@ -1,9 +1,24 @@
-import React from 'react'
+import { useState } from "react";
 
 const Busca = () => {
-  return (
-    <div>Busca</div>
-  )
-}
+  const [search, setSearch] = useState("");
 
-export default Busca
+  const handleClick = () => {
+    console.log(search);
+    setSearch("");
+  };
+  
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Digite a sua busca..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <button onClick={handleClick}>Buscar</button>
+    </div>
+  );
+};
+
+export default Busca;
