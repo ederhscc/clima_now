@@ -12,6 +12,9 @@ function App() {
   const [clima, setClima] = useState(null);
   const [previsao, setPrevisao] = useState([]);
 
+  // carregando a chave da api do arquivo .env
+  const apiKey = import.meta.env.VITE_API_KEY || ""
+
   return (
     <div>
       <Titulo>Condições Climáticas</Titulo>
@@ -23,3 +26,5 @@ function App() {
 }
 
 export default App;
+
+// site da api => https://openweathermap.org/
