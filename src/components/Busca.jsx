@@ -1,22 +1,15 @@
-import { useState } from "react";
+const Busca = ({cidade, setCidade, buscarClima}) => {
 
-const Busca = () => {
-  const [search, setSearch] = useState("");
-
-  const handleClick = () => {
-    console.log(search);
-    setSearch("");
-  };
-  
+    
   return (
     <div>
       <input
         type="text"
-        placeholder="Digite a sua busca..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Digite uma cidade..."
+        value={cidade}
+        onChange={(e) => setCidade(e.target.value)}
       />
-      <button onClick={handleClick}>Buscar</button>
+      <button onClick={buscarClima}>Buscar</button>
     </div>
   );
 };
